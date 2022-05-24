@@ -1,0 +1,49 @@
+進去跑 io_SWITCHWTPE = True; io_runagain=true 會在 inventory
+沒進去跑 io_SWITCHWTPE = True; io_runagain = false 會在上一個頁面
+	上一個頁面:  如果進去跑，就在inventory，如果是剛換倉，第一次跑換倉，就會在destination。所以換倉後沒有進去跑過，就不要按destination
+
+
+如果有錯就先中斷RPA?
+
+
+010 VVV
+
+100 VVV
+
+001 VVV
+
+000
+
+
+010 沒有抓到表格
+100 沒有抓到表格
+001 有抓到表格
+進去跑才抓的到表格
+
+該抓表格的時候: 最後一個，且沒有進去跑，且換倉過，CountryCode.contains("Taiwan")
+io_arr9.length=0, io_click=true, io_SWITCHWTPE=True, CountryCode.contains("Taiwan")
+
+
+測黃標
+測 101 VVV
+110 VVV
+011 VVV
+
+
+if 有Y，去抓YELLOW
+出來是EXDT2 row.count=2
+EXDT1 row.count = 8
+
+if 有Y，
+yidxarr= [2,5]
+
+SSS = 兩個row表格(EXDT2)的第一個
+CCC = yidxarr(第一個)，填在實際表格(EXDT1)的[2]
+BBB+1
+
+SSS= 兩個row表格(EXDT2)的第二個
+CCC = yindxarr(第二個)，填在實際表格(EXDT1)的[5]
+BBB+1
+
+SSS= 兩個row表格(EXDT2)的第三個，超出範圍了，到catch
+
